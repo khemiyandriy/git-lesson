@@ -57,3 +57,17 @@ function grid(size){
 
   console.log(grid(50));
 
+
+  // task3
+
+function parentheses(string){
+  let arr = string.split('');
+  let result=0;
+  for (let i=0; i<arr.length; i++) {
+      if (arr[i]==='(') {result++} else 
+      if (arr[i]===')') {result--};
+      if (result < 0) {return false};
+  }
+      if(result > 0) {return false} else return true;
+}
+console.log(parentheses("(())((()())())"));
