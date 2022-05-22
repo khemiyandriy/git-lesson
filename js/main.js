@@ -37,3 +37,23 @@ function calculate () {
 };
 
 
+
+// task2
+
+let alphabet = [...Array(26).keys()].map(i => String.fromCharCode(i + 97));
+
+function grid(size){
+    let arr = new Array();
+    for(let i=0; i<size; i++){
+      arr[i] = new Array();
+      for(let j=0; j<size; j++){
+        let letterNumber = i+j;
+        for (let x=0; letterNumber >= 26; x++) {letterNumber=letterNumber-26};
+        arr[i][j] = alphabet[letterNumber];
+      }
+    }
+    return arr;
+  }
+
+  console.log(grid(50));
+
